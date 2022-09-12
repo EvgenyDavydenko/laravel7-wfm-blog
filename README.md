@@ -5,3 +5,7 @@
 2.  php artisan make:model Models\\Post --migration
 
     php artisan migrate
+
+3.  php artisan make:factory PostFactory --model=Models\\Post
+
+    php artisan db:seed
