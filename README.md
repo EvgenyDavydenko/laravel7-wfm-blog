@@ -9,3 +9,5 @@
 3.  php artisan make:factory PostFactory --model=Models\\Post
 
     php artisan db:seed
+
+4.  php artisan make:controller PostController
