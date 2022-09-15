@@ -12,9 +12,13 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::paginate(4);
+        if($request)
+            $posts = Post::where('content', 'like', '%'.$request->search.'%')->paginate(4);
+        else
+            $posts = Post::paginate(4);
+        
         return view('post.index', ['posts' => $posts]);
     }
 
@@ -47,7 +51,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+
     }
 
     /**

@@ -13,3 +13,5 @@
 4.  php artisan make:controller PostController
 
 5.  php artisan make:controller PostController --resource --model=Models/Post
+
+6.  Поиск в содержании поста по заданному в форме слову
