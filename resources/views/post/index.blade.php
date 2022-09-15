@@ -13,7 +13,7 @@
     <div class="container">
         <div class="row">
             @foreach($posts as $post)
-            <div class="col-6">
+            <div class="col-6 mb-4">
                 <div class="card">
                     <div class="card-header"><?=$post['title']?></div>
                     <div class="card-body"><?=$post['content']?></div>
@@ -21,7 +21,10 @@
             </div>
             @endforeach
         </div>
+        {{ $posts->links() }}
     </div>
+
+    
 
     
 </body>
